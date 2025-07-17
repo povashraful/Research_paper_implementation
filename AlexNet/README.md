@@ -33,7 +33,7 @@ AlexNet is one of the most influential convolutional neural networks (CNNs), int
 
 This repository includes a clean PyTorch implementation of AlexNet.
 
-🔗 [Click here to view the implementation code](./alexnet_model_tutorial.py)
+🔗 [Click here to view the implementation code](https://github.com/povashraful/Research_paper_implementation/blob/main/AlexNet/Implementing_AlexNet_using_PyTorch.ipynb)
 
 ---
 
