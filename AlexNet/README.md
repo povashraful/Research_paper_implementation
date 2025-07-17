@@ -14,11 +14,11 @@ AlexNet is one of the most influential convolutional neural networks (CNNs), int
 
 ---
 
-## 📐 AlexNet Architecture
+## 📐 AlexNet Architecture (Simplified Version)
 
-![AlexNet Architecture](https://neurohive.io/wp-content/uploads/2018/11/alexnet-architecture.png)
+![AlexNet Architecture](https://github.com/povashraful/Research_paper_implementation/blob/main/AlexNet/model_arch_simplified.png)
 
-*Image source: [Neurohive](https://neurohive.io/en/popular-networks/alexnet/)*
+*Image source: [Medium](https://medium.com/@abhishekjainindore24/deep-learning-architecture-2-alexnet-8018f7640161)*
 
 ---
 
