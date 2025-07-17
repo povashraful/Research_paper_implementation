@@ -5,8 +5,8 @@ sometimes just the architecture, sometimes full projects.
 
 I also share explanations via:
 
-- 📝 [Blog](#) [[`Blog`](https://medium.com/@povashraful)] 
-- 🎥 [YouTube](#) [[`YouTube`](https://www.youtube.com/@povashraful)] 
+- 📝 [[`Blog`](https://medium.com/@povashraful)] 
+- 🎥 [[`YouTube`](https://www.youtube.com/@povashraful)] 
 
 
 
@@ -25,7 +25,9 @@ Each folder typically includes:
 
 ## ✅ Examples
 
-- **AlexNet** –  [[`Code`](https://github.com/povashraful/Research_paper_implementation/tree/main/AlexNet)] 
+- **AlexNet** –  [[`Code`](https://github.com/povashraful/Research_paper_implementation/tree/main/AlexNet)] [[`Orginal Paper`](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)]
+-
+- 
 -
 -   [Code](#) | [Blog](#) | [YT](#)  
 
