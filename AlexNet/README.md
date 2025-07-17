@@ -1,1 +1,143 @@
 
+# AlexNet from Scratch in PyTorch
+
+This repository contains a clean and educational implementation of the classic **AlexNet** architecture using PyTorch. It includes proper layer-by-layer design, weight initialization, and model summarization.
+
+---
+
+## 🧠 Model Features
+
+- AlexNet architecture implemented from scratch
+- Modular, extensible PyTorch class
+- Weight initialization following original paper
+- Compatible with GPU and CPU
+- Includes model summary with `torchinfo`
+
+---
+
+## 📁 Repository Structure
+
+```
+AlexNet-PyTorch-Tutorial/
+├── alexnet_model_tutorial.py    # Main model implementation
+├── README.md                    # Project guide and overview
+```
+
+---
+
+## 🧰 Installation
+
+```bash
+git clone https://github.com/<your-username>/AlexNet-PyTorch-Tutorial.git
+cd AlexNet-PyTorch-Tutorial
+pip install torch torchvision torchinfo
+```
+
+---
+
+## 🚀 Running the Code
+
+```bash
+python alexnet_model_tutorial.py
+```
+
+This will:
+- Print the model architecture
+- Show a detailed summary with layer outputs and parameters
+
+---
+
+## 🔍 Code Overview
+
+### 1. Define AlexNet Class
+The model is implemented as a subclass of `torch.nn.Module`.
+
+```python
+class AlexNet(nn.Module):
+    def __init__(self, input_channels=3, output_classes=1000):
+        super(AlexNet, self).__init__()
+```
+
+### 2. Convolutional and Pooling Layers
+Five convolutional layers with ReLU, max-pooling, and local response normalization.
+
+```python
+self.conv1 = nn.Conv2d(input_channels, 96, kernel_size=11, stride=4, padding=0)
+self.maxpooling = nn.MaxPool2d(kernel_size=3, stride=2)
+self.norm = nn.LocalResponseNorm(size=5, k=2)
+```
+
+### 3. Fully Connected Layers
+
+```python
+self.fcn1 = nn.Linear(256 * 6 * 6, 4096)
+self.fcn2 = nn.Linear(4096, 4096)
+self.fcn3 = nn.Linear(4096, output_classes)
+```
+
+### 4. Dropout, Activation, Flatten
+```python
+self.activation = nn.ReLU()
+self.dropout = nn.Dropout(0.5)
+self.flatten = nn.Flatten()
+```
+
+### 5. Weight Initialization
+Weights are initialized with a normal distribution. Bias is set conditionally.
+```python
+def _init_weights(self):
+    for i, layer in enumerate(self.modules()):
+        if isinstance(layer, (nn.Conv2d, nn.Linear)):
+            nn.init.normal_(layer.weight, mean=0.0, std=0.01)
+            if layer.bias is not None:
+                nn.init.constant_(layer.bias, val=1 if i in range(1,8) else 0)
+```
+
+### 6. Forward Pass
+The layers are applied in sequence mimicking the AlexNet paper:
+```python
+def forward(self, x):
+    x = self.maxpooling(self.norm(self.activation(self.conv1(x))))
+    x = self.maxpooling(self.norm(self.activation(self.conv2(x))))
+    x = self.activation(self.conv3(x))
+    x = self.activation(self.conv4(x))
+    x = self.maxpooling(self.activation(self.conv5(x)))
+    x = self.flatten(x)
+    x = self.activation(self.fcn1(x))
+    x = self.dropout(x)
+    x = self.activation(self.fcn2(x))
+    x = self.dropout(x)
+    return self.fcn3(x)
+```
+
+---
+
+## 📊 Model Summary
+The `torchinfo.summary()` function prints the model's parameter count and output shapes for each layer.
+
+---
+
+## 🧪 Extend to Training
+To use this model in training:
+
+1. Prepare dataset (e.g., CIFAR-10 or ImageNet)
+2. Preprocess with `transforms.Resize((227,227))`
+3. Use `DataLoader` to batch data
+4. Define optimizer & loss:
+   ```python
+   criterion = nn.CrossEntropyLoss()
+   optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+   ```
+5. Write training & evaluation loops
+
+---
+
+## 📌 Notes
+- The model mimics original AlexNet structure.
+- Input size is expected to be `(3, 227, 227)`.
+- Change `output_classes` to match your dataset.
+
+---
+
+## ⭐ Contribute / Fork / Star
+If you find this helpful, give it a ⭐ and share your feedback or suggestions!
