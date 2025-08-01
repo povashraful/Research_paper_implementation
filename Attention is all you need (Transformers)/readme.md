@@ -6,5 +6,5 @@ In addition, I will me sharing my notes as well.
 
 Have a nice day 
 
-Practice Code: 
+Practice Code: [[`Practice Code`](https://medium.com/@povashraful)] 
 The orginal paper source: https://arxiv.org/abs/1706.03762
