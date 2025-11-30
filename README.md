@@ -31,7 +31,7 @@ Each folder typically includes:
 
 - **U-Net** –  [[`Code`](https://github.com/povashraful/Research_paper_implementation/blob/main/Implementing_U_Net.ipynb)] [[`Orginal Paper`](https://arxiv.org/abs/1505.04597)] <br>
 
-- **Attention is all your need (Transformers)** –  [[`Code`](https://github.com/povashraful/Research_paper_implementation/blob/main/Transformer_from_scratch.ipynb)] [[`Orginal Paper`](https://arxiv.org/abs/1706.03762)] Implementation video: (coming soon)
+- **Attention is all your need (Transformers)** –  [[`Code`](https://github.com/povashraful/Research_paper_implementation/blob/main/Attention%20is%20all%20you%20need%20(Transformers)/Transformer_from_scratch.ipynb)] [[`Orginal Paper`](https://arxiv.org/abs/1706.03762)] Implementation video: (coming soon)
 - 
 -
 -   [Code](#) | [Blog](#) | [YT](#)  
