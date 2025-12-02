@@ -33,7 +33,7 @@ Each folder typically includes:
 
 - **Attention is all your need (Transformers)** –  [[`Code`](https://github.com/povashraful/Research_paper_implementation/blob/main/Attention%20is%20all%20you%20need%20(Transformers)/Transformer_from_scratch.ipynb)] [[`Orginal Paper`](https://arxiv.org/abs/1706.03762)] Implementation video: (coming soon) <br>
 
-- **Simple LLM Tokenizer from scratch** - [[`Code`]()] [[`Orginal Paper`]()] <br>
+- **Simple LLM Tokenizer from scratch** - [[`Code`](https://github.com/povashraful/sota_implementation/blob/main/simple_tokenizer_from_scratch.ipynb)]<br>
 - - **Byte Pair Encoding from scratch** -   <br>
 -
 
