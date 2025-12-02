@@ -1,4 +1,4 @@
-# 📘 Research Paper Implementation
+# 📘 SOTA Implementation
 
 A collection of research paper implementations mainly for learning purpose —  
 sometimes just the architecture, sometimes full projects.
